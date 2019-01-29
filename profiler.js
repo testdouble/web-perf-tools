@@ -31,7 +31,7 @@ console.log(`Creating folder for report ${folderName} ...`);
 fs.mkdirSync(`reports/${folderName}`);
 
 Promise.resolve(urls).mapSeries(url => {
-  return launchChromeAndRunLighthouse(`http://${url.url}`, opts).then(results => {
+  return launchChromeAndRunLighthouse(`${url.protocol || 'http'}://${url.url}`, opts).then(results => {
     console.log(`Generating report for ${url.title}`);
     fs.writeFileSync(`${process.cwd()}/reports/${folderName}/${url.title}.html`, results);
   });
