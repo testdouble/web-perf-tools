@@ -33,6 +33,6 @@ fs.mkdirSync(`reports/${folderName}`);
 Promise.resolve(urls).mapSeries(url => {
   return launchChromeAndRunLighthouse(`http://${url.url}`, opts).then(results => {
     console.log(`Generating report for ${url.title}`);
-    fs.writeFileSync(`${process.cwd()}/${folderName}/${url.title}.html`, results);
+    fs.writeFileSync(`${process.cwd()}/reports/${folderName}/${url.title}.html`, results);
   });
 })
