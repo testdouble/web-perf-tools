@@ -1,0 +1,19 @@
+{
+  "name": "web-perf-tools",
+  "version": "1.0.0",
+  "description": "a lighthouse profiling runner",
+  "main": "profiler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "profile",
+    "performance"
+  ],
+  "author": "dave@testdouble.com",
+  "license": "MIT",
+  "devDependencies": {
+    "bluebird": "^3.5.3",
+    "lighthouse": "^4.1.0"
+  }
+}
